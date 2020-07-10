@@ -38,7 +38,6 @@ function App() {
           <Route path="/interests" component={Interests} />
         </Switch>
       </main>
-      )}
     </Router>
   );
 }
