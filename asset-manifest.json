@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/resume-site/static/css/main.5f361e03.chunk.css",
+    "main.js": "/resume-site/static/js/main.e3e69fb0.chunk.js",
+    "main.js.map": "/resume-site/static/js/main.e3e69fb0.chunk.js.map",
+    "runtime-main.js": "/resume-site/static/js/runtime-main.24352b3c.js",
+    "runtime-main.js.map": "/resume-site/static/js/runtime-main.24352b3c.js.map",
+    "static/js/2.c2fa3d69.chunk.js": "/resume-site/static/js/2.c2fa3d69.chunk.js",
+    "static/js/2.c2fa3d69.chunk.js.map": "/resume-site/static/js/2.c2fa3d69.chunk.js.map",
+    "index.html": "/resume-site/index.html",
+    "precache-manifest.719a7e1a27406629a386730761f8ac71.js": "/resume-site/precache-manifest.719a7e1a27406629a386730761f8ac71.js",
+    "service-worker.js": "/resume-site/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/resume-site/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.c2fa3d69.chunk.js.LICENSE.txt": "/resume-site/static/js/2.c2fa3d69.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/resume-site/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.24352b3c.js",
+    "static/js/2.c2fa3d69.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.e3e69fb0.chunk.js"
+  ]
+}
