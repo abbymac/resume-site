@@ -39,9 +39,7 @@ const About = ({ id }) => {
               />
               <DescriptionContain>
                 <h2>Where I'm From</h2>
-                <DescriptionText
-                  style={{ fontFamily: "'Raleway', 'sans-serif'" }}
-                >
+                <DescriptionText>
                   I grew up in Cape Elizabeth, Maine; a small town (we didn't
                   get a stoplight until 2012) just outside of Portland. It's
                   home to the most photographed lighthouse in the world,
@@ -57,9 +55,7 @@ const About = ({ id }) => {
               />
               <DescriptionContain left>
                 <h2>Education</h2>
-                <DescriptionText
-                  style={{ fontFamily: "'Raleway', 'sans-serif'" }}
-                >
+                <DescriptionText>
                   I graduated from Trinity College in May of 2018 with a
                   Bachelor's of Science in Mechanical Engineering. While there I
                   was a four year starter on the nationally ranked varsity
@@ -83,7 +79,7 @@ const About = ({ id }) => {
 export default About;
 
 const BigContainer = styled.div`
-  background-color: #8c93a8;
+  background-color: rgb(11, 13, 17);
   padding: 20px 0 40px 0;
   display: flex;
   justify-content: center;
@@ -96,12 +92,15 @@ const DarkCover = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 600px) {
+    width: 85%;
+  }
 `;
 
 const DescriptionContain = styled.div`
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #5c80a3;
   margin-left: ${(props) => (props.left ? "0px" : "50px")};
   margin-right: ${(props) => (props.left ? "50px" : "0px")};
   @media (max-width: 768px) {
@@ -110,7 +109,7 @@ const DescriptionContain = styled.div`
 `;
 
 const DescriptionText = styled.p`
-  color: #333;
+  color: #f4f4f4;
   margin-top: 0;
   font-size: 1.2em;
   line-height: 1.3em;
@@ -123,17 +122,20 @@ const TwoColumn = styled.div`
   justify-content: center;
   align-items: center;
   & > h2 {
-    color: #cfd8dc;
+    color: #fdf0d5;
   }
   margin-top: 30px;
   flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
 
   @media (max-width: 768px) {
     flex-direction: column !important;
+    & > h2 {
+      text-align: center !important;
+    }
   }
 `;
 
 const Title = styled.h1`
   margin: 10px 0 10px 0;
-  color: #cfd8dc;
+  color: #5c80a3;
 `;

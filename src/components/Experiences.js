@@ -36,17 +36,16 @@ const Experiences = ({ id }) => {
   return (
     <Container id={id}>
       <InnerContainer>
-        <h1>Professional Experience</h1>
+        <Header>Professional Experience</Header>
         <p style={{ lineHeight: "1.5em" }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
-          vitae tortor condimentum lacinia quis vel eros donec ac. Est
-          ullamcorper eget nulla facilisi etiam dignissim diam quis enim.
-          Faucibus in ornare quam viverra. Semper risus in hendrerit gravida
-          rutrum. Massa tempor nec feugiat nisl pretium fusce id. Nec sagittis
-          aliquam malesuada bibendum arcu vitae elementum. Turpis massa
-          tincidunt dui ut ornare lectus sit amet est. Sed enim ut sem viverra.
-          Dignissim cras tincidunt lobortis feugiat
+          After graduating college with a degree in mechanical engineering, I
+          knew I wanted to work in analytics. It was while I was working as a
+          marketing analyst focused on business intelligence that I realized I
+          really wanted to expand into programming. I found a mentor in Knotel’s
+          engineering department, who gave me my first project. At night and
+          over weekends, I worked to improve my programming skills. A few more
+          projects for the engineering department, and I was able to officially
+          join them.
         </p>
         {Positions.map((position, i) => {
           return <ResumeItem details={position} key={i} />;
@@ -63,12 +62,17 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fdf0d5;
+  background-color: #f5f5f5;
   color: #333;
 `;
-
+const Header = styled.h1`
+  color: #5c80a3;
+`;
 const InnerContainer = styled.div`
-  width: 70%;
+  width: 80%;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export default Experiences;

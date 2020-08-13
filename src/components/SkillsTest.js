@@ -32,7 +32,7 @@ const SkillRanks = [
   },
   {
     name: "Python",
-    rank: 2,
+    rank: 1,
   },
   {
     name: "Node",
@@ -71,7 +71,7 @@ const SkillRanks = [
     rank: 4,
   },
   {
-    name: "Google Analytics",
+    name: "Google AdWords/Analytics",
     rank: 4,
   },
 ];
@@ -81,7 +81,7 @@ const Skills = ({ id }) => {
 
   return (
     <Container id={id}>
-      <h1>Skills</h1>
+      <h1>What I do.</h1>
       <SkillDescription>
         I'm always looking to improve and learn new technologies. Here are the
         ones I'm most comfortable with.
@@ -118,7 +118,6 @@ const CircleContain = styled.div`
   display: inline-flex;
   justify-content: space-between;
 `;
-
 const Container = styled.div`
   width: 100%;
   padding: 40px;
@@ -144,11 +143,11 @@ const SkillName = styled.div`
 `;
 
 const Circle = styled.div`
-  background-color: ${(props) => (props.filled ? "#5C80A3" : "#333333")};
+  background-color: ${(props) => (props.filled ? "#8C93A8" : "#333333")};
   border-radius: 50%;
   display: inline-block;
   margin-right: 5px;
-  border: 1px solid #5c80a3;
+  border: 1px solid #8c93a8;
   height: 15px;
   width: 15px;
 `;
