@@ -145,16 +145,6 @@ const BackgroundContainer = styled.div`
 
   background-image: ${(props) =>
     props.mobile ? "none" : `url(${ImageSizes.heroImage.large.src})`};
-
-  // @media (max-width: 768px) {
-  //   background-image: url(${ImageSizes.heroImage.medium.src});
-  // }
-  // @media (max-width: 375px) {
-  //   background-image: url(${ImageSizes.heroImage.small.src});
-  // }
-  // @media (max-width: 360px) {
-  //   background-image: url(${ImageSizes.heroImage.extraSm.src});
-  // }
 `;
 
 const BigContainer = styled.div`
