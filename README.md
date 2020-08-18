@@ -8,7 +8,7 @@
 
 ### Things to add
 
-[ ] Add interests section
-[ ] Include strava embed
-[ ] Add minor animation to mobile main page
-[ ] Improve about me section
+- [ ] Add interests section
+- [ ] Include strava embed
+- [ ] Add minor animation to mobile main page
+- [ ] Improve about me section
