@@ -8,6 +8,7 @@
 
 ### Things to add
 
+- [x] Mobile config
 - [ ] Add interests section
 - [ ] Include strava embed
 - [ ] Add minor animation to mobile main page
