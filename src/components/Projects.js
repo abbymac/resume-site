@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import ProjectItem from "./ProjectItem";
 import Grid from "@material-ui/core/Grid";
@@ -13,19 +13,19 @@ const projectList = [
     features: ["OAuth, State Management, React"],
   },
   {
-    name: "Résumé Site",
-    image: "https://i.imgur.com/b0AkI8M.png",
-    link: "https://github.com/abbymac/resume-site",
-    about: "You're seeing it! Built to display background and recent projects.",
-    features: ["React, Large Project"],
-  },
-  {
     name: "Chatroom App",
     image: "https://i.imgur.com/byyqY4l.png",
     link: "https://github.com/abbymac/Chatroom-app",
     about:
       "Chatroom app using Websockets. Multiple users enter a chatroom and exchange messages.",
     features: ["Node.js, Websockets, React"],
+  },
+  {
+    name: "Résumé Site",
+    image: "https://i.imgur.com/b0AkI8M.png",
+    link: "https://github.com/abbymac/resume-site",
+    about: "You're seeing it! Built to display background and recent projects.",
+    features: ["React, Large Project"],
   },
   {
     name: "ToDo App",
@@ -61,7 +61,7 @@ const Title = styled.div`
 
 const Container = styled.div`
   width: 100%;
-  padding: 40px;
+  padding: 40px 40px 90px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;

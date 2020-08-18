@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 import pdf from "../Abby_McInerney_Resume.pdf";
-import { List, ListItem, ListItemText } from "@material-ui/core";
 
-const NavBar = ({ transparent }) => {
+const NavBar = ({ transparent, mobile }) => {
   return (
     <NavContain transparent={transparent}>
       <Left>
@@ -14,7 +13,7 @@ const NavBar = ({ transparent }) => {
           to="experiences"
           spy={true}
           smooth={true}
-          offset={-60}
+          offset={mobile ? 0 : -60}
           duration={500}
         >
           Experience
@@ -24,7 +23,7 @@ const NavBar = ({ transparent }) => {
           to="skills"
           spy={true}
           smooth={true}
-          offset={-60}
+          offset={mobile ? 0 : -60}
           duration={500}
         >
           Skills
@@ -34,7 +33,7 @@ const NavBar = ({ transparent }) => {
           to="about"
           spy={true}
           smooth={true}
-          offset={-60}
+          offset={mobile ? 0 : -60}
           duration={500}
         >
           About Me
@@ -44,7 +43,7 @@ const NavBar = ({ transparent }) => {
           to="projects"
           spy={true}
           smooth={true}
-          offset={-60}
+          offset={mobile ? 0 : -60}
           duration={500}
         >
           Projects

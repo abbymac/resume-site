@@ -1,51 +1,23 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import styled from "styled-components";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-
-import Background from "../images/heroImage.jpg";
-import BackgroundSm from "../images/smHeroImage.jpg";
+import ImageSizes from "../components/ImageSizes";
 import About from "./About";
-// import About from "./AboutTest";
+import { useMediaQuery } from "react-responsive";
 
 import Experiences from "../components/Experiences";
 import Projects from "../components/Projects";
 
 import Skills from "../components/Skills";
-import Interests from "../components/Interests";
-import DrawImages from "../components/DrawImages";
+
 import pdf from "../Abby_McInerney_Resume.pdf";
 
-const Main = () => {
-  const [drawOpen, setDrawOpen] = useState(false);
-  const [imageSelect, setImage] = useState("");
-
-  const [currentImage, setCurrentImage] = useState(0);
-  const [viewerIsOpen, setViewerIsOpen] = useState(false);
-
-  const openLightbox = useCallback((event, { photo, index }) => {
-    setCurrentImage(index);
-    setViewerIsOpen(true);
-  }, []);
-
-  const closeLightbox = () => {
-    setCurrentImage(0);
-    setViewerIsOpen(false);
-  };
-
-  const handleOpen = (e) => {
-    setDrawOpen(true);
-    setImage(e.target.src);
-  };
-
-  const handleClose = () => {
-    setDrawOpen(false);
-  };
-
+const Main = ({ mobile }) => {
   return (
     <div>
       <BigContainer>
-        <BackgroundContainer>
+        <BackgroundContainer mobile={mobile}>
           <DarkCover>
             <PopContain
               animate={{ scale: 1.5 }}
@@ -53,32 +25,17 @@ const Main = () => {
                 duration: 0.5,
               }}
             >
-              <h2
-                style={{
-                  marginBottom: "10px",
-                  textShadow: "1px 1px 1px #1B2232",
-                  fontWeight: 400,
-                }}
-              >
-                Hi there, I'm Abby.
-              </h2>
-              <p
-                style={{
-                  margin: "0 0 10px 0",
-                  textShadow: "1px 1px rgb(27, 34, 50)",
-                }}
-              >
-                I'm a Full Stack Engineer
-              </p>
+              <LargeText>Hi there, I'm Abby.</LargeText>
+              <TagText mobile={mobile}>I'm a Full Stack Engineer</TagText>
               <Sub
                 activeClass="active"
                 to="experiences"
                 spy={true}
                 smooth={true}
-                offset={-60}
+                offset={mobile ? 0 : -60}
                 duration={500}
               >
-                <BodyText>Find out more</BodyText>
+                <BodyText mobile={mobile}>Find out more</BodyText>
                 <Arrow />
               </Sub>
               <Resume href={pdf} target="_blank">
@@ -91,17 +48,6 @@ const Main = () => {
         <Skills id="skills" />
         <About id="about" />
         <Projects id="projects" />
-        <Interests
-          images={DrawImages}
-          selected={imageSelect}
-          openLightbox={openLightbox}
-          closeLightbox={closeLightbox}
-          currentImage={currentImage}
-          viewerIsOpen={viewerIsOpen}
-          handleOpen={handleOpen}
-          handleClose={handleClose}
-          open={drawOpen}
-        />
       </BigContainer>
     </div>
   );
@@ -109,11 +55,23 @@ const Main = () => {
 
 export default Main;
 
+const LargeText = styled.h2`
+  margin: 10px;
+  text-shadow: 1px 1px 1px #1b2232;
+  font-weight: 400;
+`;
+
+const TagText = styled.p`
+  margin: 0 0 10px 0;
+  text-shadow: 1px 1px rgb(27, 34, 50);
+  font-size: ${(props) => (props.mobile ? "13px" : "16px")};
+`;
+
 const Resume = styled.a`
   color: #9ebfdc;
   text-decoration: none;
   margin: 10px 0;
-  font-size: 12px;
+  font-size: ${(props) => (props.mobile ? "8px" : "12px")};
 
   &:hover {
     color: #f4f3f4;
@@ -136,7 +94,8 @@ const Arrow = styled.div`
   -webkit-transform: rotate(-45deg);
 `;
 const BodyText = styled.p`
-  font-size: 14px;
+  font-size: ${(props) => (props.mobile ? "11px" : "14px")};
+
   color: #fefefe;
   margin: 0 10px 0 0;
 `;
@@ -176,19 +135,26 @@ const PopContain = styled(motion.div)`
 
 const BackgroundContainer = styled.div`
   height: 100vh;
-
-  background-image: url(${Background});
-
-  // @media (min-width: 768px) {
-  //   background-image: url(${Background});
-  // }
-  background-color: #d3d3d3;
+  background-color: rgb(11, 13, 17);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   background-position: top;
   justify-content: center;
   background-size: cover;
+
+  background-image: ${(props) =>
+    props.mobile ? "none" : `url(${ImageSizes.heroImage.large.src})`};
+
+  // @media (max-width: 768px) {
+  //   background-image: url(${ImageSizes.heroImage.medium.src});
+  // }
+  // @media (max-width: 375px) {
+  //   background-image: url(${ImageSizes.heroImage.small.src});
+  // }
+  // @media (max-width: 360px) {
+  //   background-image: url(${ImageSizes.heroImage.extraSm.src});
+  // }
 `;
 
 const BigContainer = styled.div`

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 
 const ResumeItem = ({ details }) => {
-  const [isVisible, setVisible] = React.useState(false);
+  const [isItemVisible, setVisible] = React.useState(false);
   const domRef = React.useRef();
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -12,7 +12,7 @@ const ResumeItem = ({ details }) => {
   }, []);
 
   return (
-    <ExpContain isVisible={isVisible} ref={domRef}>
+    <ExpContain visible={isItemVisible} ref={domRef}>
       <ImageBlock>
         <img src={details.logo} alt="Knotel Logo" style={{ width: "100%" }} />
       </ImageBlock>
@@ -36,9 +36,9 @@ const ExpContain = styled.div`
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
   padding: 40px;
-  opacity: ${(props) => (props.isVisible ? 1 : 0)};
-  transform: ${(props) => (props.isVisible ? "none" : "translateY(10vh)")};
-  visibility: ${(props) => (props.isVisible ? "visible" : "hidden")};
+  opacity: ${(props) => (props.visible ? 1 : 0)};
+  transform: ${(props) => (props.visible ? "none" : "translateY(10vh)")};
+  visibility: ${(props) => (props.visible ? "visible" : "hidden")};
   transition: opacity 900ms ease-out, transform 400ms ease-out,
     visibility 900ms ease-out;
   will-change: opacity, transform, visibility;

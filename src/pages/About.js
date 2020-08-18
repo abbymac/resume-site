@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Avatar from "@material-ui/core/Avatar";
 
-import PHL from "../images/PHL.jpg";
+import PHL from "../images/PHLsm.jpg";
 import Chapel from "../images/Chapel.jpeg";
 import Headshot from "../images/Headshot.jpeg";
 
@@ -63,9 +63,9 @@ const About = ({ id }) => {
                   championship games, 3 final fours, and 4 conference
                   championships.
                   <br />
-                  <br />I balanced athletic comittments, a part-time job, being
-                  vice-president of our college's SWE chapter, and a rigerous
-                  academic courseload.
+                  <br />I balanced athletic comittments, a part-time job,
+                  serving as vice-president of my college's SWE chapter, and a
+                  rigerous academic courseload.
                 </DescriptionText>
               </DescriptionContain>
             </TwoColumn>

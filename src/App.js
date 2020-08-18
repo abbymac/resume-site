@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 import Main from "./pages/Main.js";
-import About from "./pages/About.js";
-import Interests from "./components/Interests.js";
 
 import NavBar from "./components/NavBar.js";
+import Footer from "./components/Footer.js";
 
 function App() {
   const [navBackground, setNavBackground] = useState(false);
@@ -26,12 +26,17 @@ function App() {
     };
   }, []);
 
+  const isMobileSize = useMediaQuery({
+    query: "(max-device-width: 768px)",
+  });
+
   return (
     <Router>
-      <NavBar transparent={navBackground} />
+      <NavBar mobile={isMobileSize} transparent={navBackground} />
       <main style={{ height: "100%" }}>
-        <Main />
+        <Main mobile={isMobileSize} />
       </main>
+      <Footer transparent={navBackground} />
     </Router>
   );
 }

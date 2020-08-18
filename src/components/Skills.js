@@ -95,7 +95,7 @@ const Skills = ({ id }) => {
                 md={3}
                 xs={12}
                 sm={4}
-                id={i}
+                key={i}
                 zeroMinWidth
                 className={classes.item}
               >

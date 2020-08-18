@@ -31,15 +31,15 @@ const DrawImages = [
     width: 3,
     height: 2,
   },
-  {
-    id: 5,
-    src: image5,
-    title: "Fort of Awesome",
-    description: "Drawing of my mom's coworker's kid fort",
-    cols: 2,
-    width: 2,
-    height: 5,
-  },
+  // {
+  //   id: 5,
+  //   src: image5,
+  //   title: "Fort of Awesome",
+  //   description: "Drawing of my mom's coworker's kid fort",
+  //   cols: 2,
+  //   width: 2,
+  //   height: 5,
+  // },
   {
     id: 6,
     src: image6,
@@ -96,15 +96,15 @@ const DrawImages = [
     width: 2,
     height: 3,
   },
-  {
-    id: 2,
-    src: image2,
-    title: "Tree Outline",
-    description: "Sharpie",
-    cols: 1,
-    width: 2,
-    height: 4,
-  },
+  // {
+  //   id: 2,
+  //   src: image2,
+  //   title: "Tree Outline",
+  //   description: "Sharpie",
+  //   cols: 1,
+  //   width: 2,
+  //   height: 4,
+  // },
 ];
 
 export default DrawImages;

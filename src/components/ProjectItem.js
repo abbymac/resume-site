@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -9,18 +9,20 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 
 const ProjectItem = ({ project }) => {
-  const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-  }, []);
+  // const [isProjectVisible, setVisible] = React.useState(false);
+  // const domRef = React.useRef();
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => setVisible(entry.isIntersecting));
+  //   });
+  //   observer.observe(domRef.current);
+  // }, []);
 
   return (
     <Grid item xs={12} sm={4}>
-      <ProjectCard isVisible={isVisible} ref={domRef}>
+      {/* <ProjectCard ref={domRef}> */}
+
+      <ProjectCard>
         <CardImage
           component="img"
           alt={project.name + " image"}
