@@ -10,6 +10,6 @@
 
 - [x] Mobile config
 - [ ] Add interests section
-- [ ] Include strava embed
+- [ ] Include strava embed in interests
 - [ ] Add minor animation to mobile main page
 - [ ] Improve about me section
