@@ -12,4 +12,3 @@
 - [ ] Add interests section
 - [ ] Include strava embed in interests section
 - [ ] Add minor animation to mobile start page
-- [ ] Improve about me section
