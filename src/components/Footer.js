@@ -38,7 +38,6 @@ const FooterContainer = styled.div`
   background-color: ${(props) =>
     !props.transparent ? "rgba(0,0,0,0)" : "rgb(11, 13, 17)"};
   transition: background-color 0.5s ease;
-
   position: fixed;
   bottom: 0;
 `;
