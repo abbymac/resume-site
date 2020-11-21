@@ -3,6 +3,7 @@ import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const Footer = ({ transparent }) => (
   <FooterContainer transparent={transparent}>
@@ -15,6 +16,13 @@ const Footer = ({ transparent }) => (
     </IconButton>
     <IconButton href={"mailto:abbylangmcinerney@gmail.com"}>
       <MailOutlineIcon style={{ color: "white" }} />
+    </IconButton>
+    <IconButton
+      href={"https://www.linkedin.com/in/abby-mcinerney/"}
+      rel="noopener"
+      target="_blank"
+    >
+      <LinkedInIcon style={{ color: "white" }} />
     </IconButton>
   </FooterContainer>
 );

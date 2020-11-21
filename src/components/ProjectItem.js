@@ -70,6 +70,7 @@ const CardImage = styled(CardMedia)`
     width: 80%;
     margin: -30px auto 0 auto;
     max-height: 200px;
+    max-width: 400px;
   }
   &.MuiCardMedia-img {
     object-fit: fill;

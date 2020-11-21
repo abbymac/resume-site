@@ -5,6 +5,14 @@ import Grid from "@material-ui/core/Grid";
 
 const projectList = [
   {
+    name: "Trivia",
+    image: "https://i.imgur.com/C1vqgBT.png",
+    link: "https://github.com/abbymac/UdacityTrivia",
+    about:
+      "Trivia Api built for Udacity project. App communicates with Postgres DB through SQLAlchemy and returns relevant trivia questions. Users can add, delete, and edit questions.",
+    features: ["Flask, Python, PostgreSQL, React"],
+  },
+  {
     name: "Track Recommender",
     image: "https://i.imgur.com/FbbCX4t.png",
     link: "https://github.com/abbymac/TrackRecommender",

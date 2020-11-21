@@ -32,10 +32,18 @@ const SkillRanks = [
   },
   {
     name: "Python",
-    rank: 2,
+    rank: 4,
   },
   {
     name: "Node",
+    rank: 3,
+  },
+  {
+    name: "Flask",
+    rank: 3,
+  },
+  {
+    name: "SQLAlchemy",
     rank: 3,
   },
   {
