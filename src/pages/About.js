@@ -5,7 +5,7 @@ import Avatar from "@material-ui/core/Avatar";
 import PHL from "../images/PHLsm.jpg";
 import Chapel from "../images/Chapel.jpeg";
 import Headshot from "../images/Headshot.jpeg";
-
+import Strava from "./Strava.js";
 import AboutMeText from "../components/AboutMeText";
 
 const About = ({ id }) => {
@@ -69,6 +69,7 @@ const About = ({ id }) => {
                 </DescriptionText>
               </DescriptionContain>
             </TwoColumn>
+            <Strava />
           </DarkCover>
         </BigContainer>
       )}

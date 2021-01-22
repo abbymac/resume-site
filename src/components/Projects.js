@@ -5,12 +5,28 @@ import Grid from "@material-ui/core/Grid";
 
 const projectList = [
   {
+    name: "Competition Tracker",
+    image: "https://i.imgur.com/iji9voe.png",
+    link: "https://github.com/abbymac/competition-tracker",
+    about:
+      "Competition Tracker built for Udacity capstone project. App communicates with Postgres DB through SQLAlchemy and returns relevant Athlete/Venue/Race information. Users can add, delete, and edit Athlete/Venue/Race. Authentication is required to perform actions beyond GET requests. API functionality is built in through /api/athletes etc. See github page for full explaination. API component deployed on Heroku at: https://capstone-competition-tracker.herokuapp.com/",
+    features: ["Flask", "Python", "PostgreSQL", "React", "API", "Auth0"],
+  },
+  {
+    name: "Coffee Shop App",
+    image: "https://i.imgur.com/y3txOKx.png",
+    link: "https://github.com/abbymac/coffee_shop",
+    about:
+      "Coffee Shop menu app built for a Udacity project. Focuses on API development and authentication flow using Auth0.",
+    features: ["Flask", "Python", "PostgreSQL", "Angular", "API", "Auth0"],
+  },
+  {
     name: "Trivia",
     image: "https://i.imgur.com/C1vqgBT.png",
     link: "https://github.com/abbymac/UdacityTrivia",
     about:
       "Trivia Api built for Udacity project. App communicates with Postgres DB through SQLAlchemy and returns relevant trivia questions. Users can add, delete, and edit questions.",
-    features: ["Flask, Python, PostgreSQL, React"],
+    features: ["Flask", "Python", "PostgreSQL", "React"],
   },
   {
     name: "Track Recommender",
@@ -18,7 +34,7 @@ const projectList = [
     link: "https://github.com/abbymac/TrackRecommender",
     about:
       "Uses Spotify API to display user's recent Liked Songs. After user selects desired seed tracks and defines target audio feature parameters, app displays a list of suggested songs.",
-    features: ["OAuth, State Management, React"],
+    features: ["OAuth", "State Management", "React"],
   },
   {
     name: "Chatroom App",
@@ -26,14 +42,14 @@ const projectList = [
     link: "https://github.com/abbymac/Chatroom-app",
     about:
       "Chatroom app using Websockets. Multiple users enter a chatroom and exchange messages.",
-    features: ["Node.js, Websockets, React"],
+    features: ["Node.js", "Websockets", "React"],
   },
   {
     name: "Résumé Site",
     image: "https://i.imgur.com/b0AkI8M.png",
     link: "https://github.com/abbymac/resume-site",
     about: "You're seeing it! Built to display background and recent projects.",
-    features: ["React, Large Project"],
+    features: ["React", "GithubPages"],
   },
   {
     name: "ToDo App",
