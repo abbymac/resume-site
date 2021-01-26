@@ -22,6 +22,11 @@ const ResumeItem = ({ details }) => {
           {details.company} <i>{details.years}</i>
         </Company>
         <Description>{details.description}</Description>
+        <ResponsibilityContainer>
+          {details.responsibilities.map((responsibility) => {
+            return <Responsibility>{responsibility}</Responsibility>;
+          })}
+        </ResponsibilityContainer>
       </TextBlock>
     </ExpContain>
   );
@@ -77,6 +82,15 @@ const JobTitle = styled.h2`
 
 const Company = styled.p`
   margin: 5px 0 0 0;
+`;
+
+const Responsibility = styled.li`
+  margin: 5px 0 0 0;
+  font-size: 14px;
+`;
+
+const ResponsibilityContainer = styled.ul`
+  margin: 0;
 `;
 
 const Description = styled.p`
