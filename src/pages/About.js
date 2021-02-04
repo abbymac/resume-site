@@ -4,6 +4,7 @@ import Avatar from "@material-ui/core/Avatar";
 
 import PHL from "../images/PHLsm.jpg";
 import Chapel from "../images/Chapel.jpeg";
+import Udacity from "../images/udacity.png";
 import Headshot from "../images/Headshot.jpeg";
 import Strava from "./Strava.js";
 import AboutMeText from "../components/AboutMeText";
@@ -29,7 +30,9 @@ const About = ({ id }) => {
             />
             <Title>About Me</Title>
             <SingleColumn>
-              <DescriptionText>{AboutMeText}</DescriptionText>
+              {AboutMeText.map((about) => (
+                <DescriptionText>{about}</DescriptionText>
+              ))}
             </SingleColumn>
             <TwoColumn>
               <Avatar
@@ -47,14 +50,16 @@ const About = ({ id }) => {
                 </DescriptionText>
               </DescriptionContain>
             </TwoColumn>
+            <Title>Education</Title>
             <TwoColumn reverse>
               <Avatar
-                alt="Portland Head Light"
+                alt="Trinity College Chapel"
                 src={Chapel}
                 style={{ height: "150px", width: "150px" }}
               />
               <DescriptionContain left>
-                <h2>Education</h2>
+                <h2>Trinity College</h2>
+
                 <DescriptionText>
                   I graduated from Trinity College in May of 2018 with a
                   Bachelor's of Science in Mechanical Engineering. While there I
@@ -69,7 +74,28 @@ const About = ({ id }) => {
                 </DescriptionText>
               </DescriptionContain>
             </TwoColumn>
-            <Strava />
+            <TwoColumn reverse>
+              <Avatar
+                alt="Udacity Logo"
+                src={Udacity}
+                style={{ height: "150px", width: "150px" }}
+              />
+              <DescriptionContain left>
+                <h2>Udacity</h2>
+                <DescriptionText>
+                  I enrolled in Udacity's full stack developer nanodegree to
+                  achieve a more complete knowledge of full stack engineering.
+                  As my professional background was predominately involved with
+                  the front end, I knew I needed to gain experience working with
+                  the backend.
+                  <br />
+                  <br />
+                  In this program, I learned data modeling, API development and
+                  documentation, identity access management, server deployment
+                  and containerization
+                </DescriptionText>
+              </DescriptionContain>
+            </TwoColumn>
           </DarkCover>
         </BigContainer>
       )}
@@ -138,5 +164,5 @@ const TwoColumn = styled.div`
 
 const Title = styled.h1`
   margin: 10px 0 10px 0;
-  color: #5c80a3;
+  color: #fdf0d5;
 `;
