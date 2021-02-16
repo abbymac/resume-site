@@ -62,15 +62,15 @@ const About = ({ id }) => {
 
                 <DescriptionText>
                   I graduated from Trinity College in May of 2018 with a
-                  Bachelor's of Science in Mechanical Engineering. While there I
-                  was a four year starter on the nationally ranked varsity
+                  Bachelor's of Science in Mechanical Engineering. While there,
+                  I was a four year starter on the nationally ranked varsity
                   Women's Lacrosse Team, where I competed in 2 national
                   championship games, 3 final fours, and 4 conference
                   championships.
                   <br />
                   <br />I balanced athletic comittments, a part-time job,
                   serving as vice-president of my college's SWE chapter, and a
-                  rigerous academic courseload.
+                  rigorous academic course load.
                 </DescriptionText>
               </DescriptionContain>
             </TwoColumn>
@@ -87,12 +87,12 @@ const About = ({ id }) => {
                   achieve a more complete knowledge of full stack engineering.
                   As my professional background was predominately involved with
                   the front end, I knew I needed to gain experience working with
-                  the backend.
+                  the back end.
                   <br />
                   <br />
                   In this program, I learned data modeling, API development and
                   documentation, identity access management, server deployment
-                  and containerization
+                  and containerization.
                 </DescriptionText>
               </DescriptionContain>
             </TwoColumn>

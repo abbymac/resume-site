@@ -55,7 +55,7 @@ const Experiences = ({ id }) => {
       <InnerContainer>
         <Header>Professional Experience</Header>
         <p style={{ lineHeight: "1.5em" }}>
-          Through my mechanical engineering degree, I grew an appreciation for
+          Through my mechanical engineering degree, I gained an appreciation for
           data analytics and computer science. After graduation in 2018, I
           worked as a marketing analyst at a mid-stage startup where I
           predominately focused on business intelligence analytics. This
@@ -63,7 +63,7 @@ const Experiences = ({ id }) => {
           initially in my job description: including development. The more I
           worked on front-end projects and developing more elegant BI solutions,
           the more I wanted to continue on this new path. As several of my
-          projects were used company wide, one of the full stack engineers
+          projects were used company-wide, one of the full stack engineers
           offered to become a mentor to me until I was able to join the
           engineering team as a full stack engineer myself.
         </p>

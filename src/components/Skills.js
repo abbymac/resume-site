@@ -35,7 +35,7 @@ const SkillRanks = [
     rank: 4,
   },
   {
-    name: "Node",
+    name: "NodeJS",
     rank: 3,
   },
   {
@@ -76,11 +76,11 @@ const SkillRanks = [
   },
   {
     name: "SQL",
-    rank: 4,
+    rank: 3,
   },
   {
     name: "PostgreSQL",
-    rank: 4,
+    rank: 3,
   },
   {
     name: "Google Analytics",
